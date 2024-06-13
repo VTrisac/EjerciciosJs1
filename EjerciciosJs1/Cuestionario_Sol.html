@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>        
+            var Nom="";
+            var Ape = "";
+            var Eda = "";
+            var Ciu = "";
+            var Nor = 0;
+            var Pro="";
+            var Texto="";
+            //Inicializamos las variables que utilizaremos en las funciones
+
+            function Provincia_Elejida()
+            {
+                var menu=document.getElementById("provincia");
+                Pro = menu.options[menu.selectedIndex].value;
+            //Pro = formulario.Provincia.options[Provincia.selectedIndex].value;
+            //Averiguamos el valor seleccionado en el cuadro combinado provincia
+            }
+
+            function ventana()
+            {
+            Nom = document.getElementById("nombre").value;
+            Ape = document.getElementById("apellidos").value;
+            Eda = document.getElementById("edad").value;
+            Ciu = document.getElementById("ciudad").value;
+            Nor = document.getElementById("Nordenadores").value;
+            //Añadimos a cada variable global el valorque ha sido indicado en el formulario
+
+            Texto = "<h1>Estos són tus datos: </h1><Hr>";
+            Texto = Texto + "Nombre: " +Nom+ "<br>Apellidos: " +Ape+ "<br>Edad: " +Eda+ "<br>";
+            Texto = Texto + "Ciudad: " +Ciu+ "<br>Número de Ordenadores: " +Nor+ "<br>";
+            Texto = Texto + "Provincia: " +Pro+ "<hr>";
+            //Creamos un texto con todos los valores creados concatenadolo con ordenes HTML.
+
+            ventana=window.open("","Resultado","toolbar=0,status=0,height=300");
+            ventana.document.write("<HTML>");
+            ventana.document.write("<HEAD>");
+            ventana.document.write("<TITLE>Datos Enviados en el Formulario</TITLE>");
+            ventana.document.write("</HEAD>");
+            ventana.document.write("<BODY>");
+            ventana.document.write(Texto);
+            ventana.document.write("</BODY>");
+            ventana.document.write("</HTML>");
+            ventana.document.close();
+            //Creamos la nueva ventana mostrando el texto creado
+            }        
+        </script>
+    </head>
+    <body bgcolor="#FFFFFF">
+        <h2 align="center">CUESTIONARIO SOBRE EL CLIENTE</h2>
+        <p>Lo que se encuentra a continuación es un <i>Formulario de Ejemplo</i>. 
+            Los formularios se utilizan para permitir al usuario que visita un 
+            <i>Sitio Web</i> (también llamado <i>Web Site</i> o simplemente 
+            <i>Pàgina Web</i>). Este formulario se encuentra descativado de manera 
+            que los datos que rellene no se enviarán aunque pulse el botón correspondiente.</p>
+        <hr>
+        <form id="formulario">
+            <p><b>Información Personal: </b></p>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td>Nombre: <input type="text" size="15" id="nombre"></td>
+                    <td>Edad: <input type="text" size="5" id="edad"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos: <input type="text" size="25" id="apellidos"></td>
+                    <td>Ciudad: <input type="text" size="15" id="ciudad"></td>
+                </tr>
+                <tr>
+                    <td>Número de ordenadores en casa: 
+                        <input type="text" size="5" id="Nordenadores">
+                    </td>
+                    <td>Provincia: 
+                        <select id="provincia" size="1" onChange="Provincia_Elejida()">
+                            <option selected>--Escoja Provincia--</option>
+                            <option value="Almeria">Almería</option>
+                            <option value="Albacete">Albacete</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Girona">Girona</option>
+                            <option value="Lleida">Lleida</option>
+                            <option value="Tarragona">Tarragona</option>
+                        </select>
+                    </td>
+                </tr>
+          </table>
+              <hr>
+          <p>Pulse el botón <b>Enviar</b> para enviar el formulario, <b>Borrar</b> 
+              borra el contenido de todos los campos del formulario: </p>
+          <p><input type="button" id="boton" value="Mostrar datos introducidos" onClick="ventana()">
+                 <input type="reset" value="Borrar"></p>
+        </form>
+    </body>
+</html>

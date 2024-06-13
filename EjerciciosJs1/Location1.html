@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function crear_ventana(Loc)
+            {
+            let nf=window.open("","Hola","toolbar=1,status=1,height=200,width=400");
+                nf.document.write("<html>");
+                nf.document.write("<head>");
+                nf.document.write("<title>Localización</title>");
+                nf.document.write("</head>");
+                nf.document.write("<body>");
+                nf.document.write("<br>Host : " + Loc.host);
+                nf.document.write("<br>Hostname : " + Loc.hostname);
+                nf.document.write("<br>Href : " + Loc.href);
+                nf.document.write("<br>Pathname : " + Loc.pathname);
+                nf.document.write("<br>Port : " + Loc.port);
+                nf.document.write("<br>Protocolo : " + Loc.protocol);
+                nf.document.write("</body>");
+                nf.document.write("</html>");
+                nf.document.close();
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <form>
+            <input type="button" id="Boto" value="Crear Ventana" onClick="crear_ventana(window.location)">
+        </form>
+</html>

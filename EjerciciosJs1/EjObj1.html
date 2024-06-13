@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        
+        function crear_ventana(Texto)
+        {
+            alert(Texto);
+            let nueva_ventana=window.open("http://"+Texto,"","");
+        }
+        
+        </script>
+    </head>
+    <body bgColor="#FFFFFF">
+        <form>
+         <p>
+            <input list="listado" id="menu">
+            <datalist id="listado">
+                <option value="www.cepibase.es">
+                <option value="www.yahoo.es">
+                <option value="www.bing.com">
+                <option value="www.google.es">                
+            </datalist>
+          <br>
+          <input type="button" id="B1" value="Abrir Nueva" onClick="crear_ventana(document.getElementById('menu').value)">
+         </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function comprobar()
+            {
+                history.go(document.getElementById('Numero').value);
+                //Accedemos a la página del historial
+            }
+            function atras()
+            {
+                document.getElementById('Numero').value=
+                document.getElementById('Numero').value - 1;
+            }
+            function adelante()
+            {
+                document.getElementById('Numero').value=eval(document.getElementById('Numero').value)+1;
+                //Utilizamos la función eval para evitar que al sumar se realice
+                //la concatenación
+            }
+        </script>
+        </head>
+        <body>
+            <form name="Formu">
+            <h3 style="text-align:center"><u>EJERCICIO PARA EL MANEJO DEL HISTORIAL</u></h3>
+            <p> Elija el número de la página que quiere visitar
+            <input type="text" id="Numero" maxlength="4" size="6" value="0">
+            <input type="button" name="menos" value="< Atrás" onClick="atras()">
+            <input type="button" name="mas" value="Adelante >" onClick="adelante()"><br>
+            Utilice los botones para indicar el número de página.</p>
+            <p><input type="button" name="fin" value="Ir a la página" onClick="comprobar()"></p>
+            </form>
+    </body>
+</html>

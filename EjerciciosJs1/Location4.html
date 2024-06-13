@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function crear_ventana()
+          {
+           var Elegir=document.getElementsByName("R1");
+           var Texto=document.getElementById("D1").value;
+           if (Elegir[1].checked)
+            {
+              window.location="http://"+Texto
+            }
+            else {
+              window.location="file://"+Texto
+            }
+          }
+        //-->
+        </SCRIPT>
+    </head>
+    <body bgColor="#FFFFFF">
+    <form id="F1">
+      <input type="text" id="D1">
+      <BR>
+        <input type="radio" checked name="R1" value="V1">Archivo de disco <BR>
+        <input type="radio" name="R1" value="V2">Dirección<BR>
+        <input type="button" id="B1" value="Abrir Nueva" onClick="crear_ventana()">
+    </form>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Crear y Recorrer un objeto MAP</h1>
+        <script>
+        // Creamos y añadimos elementos al objeto
+        let cursos = new Map();
+        cursos.set("HTML", "Curso básico de HTML");
+        cursos.set("CSS", "Curso de Hoja de Estilos en Cascada");
+        cursos.set("BOOTS", "Bootstrap 4");
+        cursos.set("PHP", "Curso de lenguaje PHP y Bases de Datos");
+        // Mostrar el total de elementos
+        document.write("El tamaño es: <b>" + cursos.size + "</b><br>");
+        
+        /*SOLUCIÓN PARA QUE FUNCIONE EN EXPLORER
+        // Mostrar el contenido de los elementos
+            cursos.forEach(function(value, key, cursos) {
+                    document.write("La clave: <b>" + key + "</b> y su valor: <b>" + value + "</b><br>");
+            });
+         */
+           
+           cursos.forEach((value, key) => {
+            document.write("La clave: <b>" + key + "</b> y su valor: <b>" + value + "</b><br>");
+            });
+
+
+        // Devolver las claves del objeto
+        document.write("<br><b>Los siguientes son claves:</b><br>");
+        for (let x of cursos.keys()) {
+            document.write(x + "<br>");
+        }
+        // Devuelve el valor de las claves relacionadas
+        document.write("<br><b>Los siguientes son sus valores:</b><br>");
+        for (let x of cursos.values()) {
+            document.write(x + "<br>");
+        }
+        // Consulta si existe el curso de CSS
+        document.write("<br><b>¿Existe el curso de CSS? </b>" +
+        cursos.has("CSS"));
+
+        </script>
+    </body>
+</html>

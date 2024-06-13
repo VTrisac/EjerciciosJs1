@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        var frase1="Explicación del ejercicio<br> ----------<br> Sitúe el puntero";
+        frase1+=" del ratón por encima de los enlaces para abrir otra ventana.";
+        var frase2="Página principal<br>--------------<br><br> Cuando hagas Click";
+        frase2+=" en este enlace irás directamente a la página de inicio del web";
+        var frase3="JavaScript<br>----------<br><br> Este enlace te llevará a la ";
+        frase3+="página de inicio de Scripts en la que encontrarás muchos más ";
+        frase3+="trucos interesantes para realizar e incluir en tus páginas web";
+        var frase4="Diccionarios<br> ------------ <br><br> Si tienes alguna duda ";
+        frase4+="sobre alguna palabra que no conoces, aquí hay una recopilación";
+        frase4+=" de las palabras más comunes utilizadas en Internet.";
+        
+        function escribe(frase)
+        {
+            var ventana = window.open("", "ventana", "top=100, height=100, width=400");
+            ventana.document.write("<html><title>Página ayuda</title><body>");
+            ventana.document.write(" " +frase+ "</body></html>");
+            ventana.document.close();
+        }
+        function escribe2(frase)
+        {
+            var ventana = window.open("", "ventana2", "height=100, width=400");
+            ventana.document.write("<html><title>Página ayuda</title><body>");
+            ventana.document.write(" " +frase+ "</body></html>");
+            ventana.document.close();
+            //Otra forma de crear una ventana sin barras ni menús sería
+            //ventana = window.open("sin barras", "ventana2", "titlebar=no, left=-1,
+            //top=-1, width=screenWidth, height=screenheight, alwaysRaised=yes");
+        }
+        function escribe3(frase)
+        {
+            var ventana = window.open("", "ventana3", "top=100, left=300, height=200, width=400");
+            ventana.document.write("<html><title>Página ayuda</title><body>");
+            ventana.document.write(" " +frase+ "</body></html>");
+            ventana.document.close();
+            //location hace aparecer la barra de dirección en la nueva ventana
+        }
+        </script>
+        <style>
+            body {
+            color:#FFFFFF;
+            background-color: #000000;
+            }
+            /*a:visited {
+            color:#FF00FF;
+            }*/
+            Table {
+            border-width: 0px;            
+            }
+        </style>
+        </head>
+        <body onload="escribe(frase1)">
+            <table>
+                <tr>
+                    <td width=200 valign=top>
+                        <b>Opciones.</b><br>
+                        <a onmouseover="escribe(frase2)" href="#">Página principal</a><br>
+                        <a onmouseover="escribe2(frase3)" href="#">JavaScripts</a><br>
+                        <a onmouseover="escribe3(frase4)" href="#">Diccionarios</a>
+                    </td>
+                </tr>
+            </table>
+    </body>
+</html>

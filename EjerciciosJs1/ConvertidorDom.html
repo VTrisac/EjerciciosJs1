@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+         <script type="text/javascript" src="conversor.js"></script>
+                 <style>
+            td{font-family: Verdana;font-size: 15pt;text-align: center;}
+            .cabecera
+            {
+                font-family: Verdana;
+                font-size:15pt;
+                text-align:center;
+                background:blue;
+                color:white;
+                font-weight: bold;
+            }
+            a{font-size: small;}
+            table{border:0;}
+        </style>
+    </head>
+   <body>
+            <form name="f" method="get">
+                <table>
+                <tr>
+                <td class="cabecera">Dolares</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                <td class="cabecera">Euros</td>
+                </tr>
+                <tr>
+                <td>$</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                <td>€</td>
+                </tr>
+                <tr>
+                <td rowspan="2"><input type="text" name="dolar" id="dolar" size="15"><br>
+                <a href="javascript:limpia(1);">Borrar Contenido</a></td>
+                <td>&nbsp;</td>
+                <td>
+                <input type="button" value="–->" onClick="convEuros(document.getElementById('dolar').value);">
+                </td>
+                <td rowspan="2"><p>&nbsp;</p></td>
+                <td rowspan="2" ><input type="text" name="euros" id="euros" size="15"><br>
+                <a href="javascript:limpia(2);">Borrar Contenido</a></td>
+                </tr>
+                <tr>
+                <td>&nbsp;</td>
+                <td>
+                <input type="button" value="<--" onClick="convDolares(document.getElementById('euros').value)">
+                </td>
+                </tr>
+                </table>
+            </form>
+    </body>
+</html>

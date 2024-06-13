@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="#FFFFFF">
+        <h2 align="center">CUESTIONARIO SOBRE EL CLIENTE</h2>
+        <p>Lo que se encuentra a continuación es un <i>Formulario de Ejemplo</i>. 
+            Los formularios se utilizan para permitir al usuario que visita un 
+            <i>Sitio Web</i> (también llamado <i>Web Site</i> o simplemente 
+            <i>Pàgina Web</i>). Este formulario se encuentra descativado de manera 
+            que los datos que rellene no se enviarán aunque pulse el botón correspondiente.</p>
+        <hr>
+        <form id="formulario">
+            <p><b>Información Personal: </b></p>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td>Nombre: <input type="text" size="15" id="T1"></td>
+                    <td>Edad: <input type="text" size="5" id="T2"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos: <input type="text" size="25" id="apellidos"></td>
+                    <td>Ciudad: <input type="text" size="15" id="ciudad"></td>
+                </tr>
+                <tr>
+                    <td>Número de ordenadores en casa: 
+                        <input type="text" size="5" id="Nordenadores">
+                    </td>
+                    <td>Provincia: 
+                        <select id="provincia" size="1">
+                            <option selected>--Escoja Provincia--</option>
+                            <option value="Almeria">Almería</option>
+                            <option value="Albacete">Albacete</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Girona">Girona</option>
+                            <option value="Lleida">Lleida</option>
+                            <option value="Tarragona">Tarragona</option>
+                        </select>
+                    </td>
+                </tr>
+          </table>
+              <hr>
+          <p>Pulse el botón <b>Enviar</b> para enviar el formulario, <b>Borrar</b> 
+              borra el contenido de todos los campos del formulario: </p>
+             <p><input type="button" id="boton" value="Mostrar datos introducidos"> 
+                 <input type="reset" value="Borrar"></p>
+        </form>
+    </body>
+</html>

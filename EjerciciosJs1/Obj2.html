@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function crear_ventana(Texto)
+            {
+            let nueva_ventana=window.open("","Hola","toolbar=1,status=1,height=100,width=400");
+            nueva_ventana.document.write("<html>");
+            nueva_ventana.document.write("<title>"+Texto+"</title>");
+            nueva_ventana.document.write("<body>");
+            nueva_ventana.document.write(Texto);
+            nueva_ventana.document.write("<form>");
+            nueva_ventana.document.write("<input type='button' id='Boton2' value='Boton'>");
+            nueva_ventana.document.write("</form>");
+            nueva_ventana.document.write("</body>");
+            nueva_ventana.document.write("</html>");
+            nueva_ventana.document.close();
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <form name="F1">
+            Línea de texto para la nueva ventana :
+            <input type="text" id="Linea" size=20><br>
+            <input type="button" id="Boton" value="Crear Ventana"
+               onClick="crear_ventana(document.getElementById('Linea').value)">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--			
+            function IrA(destino)
+            {
+                    window.location.hash=destino;
+            }
+        //-->
+        </SCRIPT> 
+    </head>
+    <body>
+        <h1>Página de Prueba</h1>
+        <BR>
+        <BR>
+        <P ID="primero">Primero</P>
+        <FORM ID="F1">
+          <INPUT TYPE="button" VALUE="Segundo" onClick="IrA('#segundo')">
+          <INPUT TYPE="button" VALUE="Tercero" onClick="IrA('#tercero')">
+        </FORM>
+
+        <BR><BR><BR><BR><BR><BR>
+
+        <P ID="segundo">Segundo</P>
+        <FORM ID="F2">
+          <INPUT TYPE="button" VALUE="Primero" onClick="IrA('#primero')">
+          <INPUT TYPE="button" VALUE="Tercero" onClick="IrA('#tercero')">
+        </FORM>
+
+        <BR><BR><BR><BR><BR><BR>
+
+        <P ID="tercero">Tercero</P>
+        <FORM ID="F3">
+          <INPUT TYPE="button" VALUE="Primero" onClick="IrA('#primero')">
+          <INPUT TYPE="button" VALUE="Segundo" onClick="IrA('#segundo')">
+        </FORM>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function crear_ventana(Texto)
+        {
+        var nueva_ventana=window.open("","Visualizador","");
+            nueva_ventana.document.write("<HTML>");
+            nueva_ventana.document.write("<TITLE>"+Texto+"</TITLE>")
+            nueva_ventana.document.write("<BODY>")
+            nueva_ventana.document.write("<IMG SRC =" + Texto + ">");
+            nueva_ventana.document.write("</BODY>");
+            nueva_ventana.document.write("</HTML>");
+        } 
+        //-->
+        </SCRIPT>
+    </head>
+    <body>
+        <BR>
+        <FORM NAME="F1">Imagen a visualizar:
+         <select id="D1" size="1">
+                <option selected value="imagenes/Mestalla.jpg">Mestalla</option>
+                <option value="imagenes/noucamp.jpg">Nou Camp</option>
+                <option value="imagenes/bernabeu.jpg">Santiago Bernabeu</option>
+         </select> 
+         <INPUT TYPE="button" NAME="Boton" VALUE="Ver" onClick="crear_ventana(document.getElementById('D1').value)">
+        </FORM>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*Estilo CSS para la capa que muestra la página*/
+            .capa1{
+                width:300px;
+                height:200px;
+                background: green;
+            }
+            .capa2{
+                width:300px;
+                height:200px;
+                background: gold;
+            }
+             .capa1n{
+                position:relative;
+                top:0px;
+                left:310px;
+                width:300px;
+                height:200px;
+                background: green;
+                float: left;
+            }
+            .capa2n{
+                position:relative;
+                top:0px;
+                left:-300px;
+                width:300px;
+                height:200px;
+                background: gold;
+                float: right;
+            }           
+        </style>
+        <script type="text/javascript">
+            function cambio(){
+               // window.resizeTo(screen.availWidth, screen.availHeight);
+            var elemento = document.getElementById('capa1');
+            var elemento2 = document.getElementById('capa2');
+            
+            if (screen.width>1024){
+             	elemento.className = "capa1n";  
+                elemento2.className = "capa2n";  
+            }else{
+               elemento.className = "capa1";    
+               elemento2.className = "capa2";  
+            }        
+            }
+	</script>
+    </head>
+    <body>
+        <div id="capa1" class="capa1">
+            <p>Esta Capa inicial mostrará un estilo en formato pequeño y sitúada 
+                en primera posición. </p>
+        </div>
+        <div id="capa2" class="capa2">
+            <p>Esta Capa inicial mostrará un estilo en formato pequeño y sitúada 
+                en segunda posición. </p>
+        </div>
+        <input type="button" onclick="cambio()" value="MoverCapas">
+    </body>
+</html>

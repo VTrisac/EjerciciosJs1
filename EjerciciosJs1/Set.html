@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Ejemplo de SET</h1>
+        <script>
+        // Creamos y añadimos elementos al objeto
+        let datos=new Set();
+        datos.add("primer valor");
+        datos.add("segundo valor");
+        datos.add("tercer valor");
+        //Podemos agregar también al set expresiones que serán evaluadas cuando
+        //sean agregadas al Set
+        datos.add(10*2);
+        //Si añadimos un elemento que ya existe, éste será ignorado
+        datos.add("segundo valor");
+        document.write("El tamaño del Set es: <b>" + datos.size + "</b><br>");
+        //Mediante delete, podemos borrar un elemento del set
+        datos.delete(20);
+        //Al ser iterable, podemos usar un bucle forEach para mostrar los
+        //elementos
+        datos.forEach((valor) => {
+        //datos.forEach(function(valor, datos){ //así funciona en todos los navegadores
+        document.write("Los elementos son: <b>" + valor + "</b><br>");
+        });
+        // Consulta si existe un elemento especifico
+        document.write("<br><b>¿Existe el elemento numérico 20? </b>" +
+        datos.has(20));
+        </script>
+    </body>
+</html>

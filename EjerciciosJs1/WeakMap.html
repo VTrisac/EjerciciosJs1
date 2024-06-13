@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo WeakMap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+.results {
+border : green 1px solid;
+background-color : aliceblue;
+text-align : left;
+padding-left : 20px;
+height : 200px;
+width : 95%;
+}
+.resultText {
+font-size : 20px;
+font-style : normal;
+color : blue;
+}
+</style>
+    </head>
+    <body>
+        <h1>Ejemplo con el objeto WEAKMAP y sus métodos</h1>
+        <script>
+            
+
+            let Obj1 = new Object();
+            let Obj2 = new Object();
+            let Obj3 = new Object();
+
+            let ObjWeakMap = new WeakMap();
+            ObjWeakMap.set( Obj1, " Empleado 1 es Juan " );
+            ObjWeakMap.set( Obj2, " Empleado 1 es Ana " );
+            ObjWeakMap.set( Obj3, " Empleado 1 es Jorge " );
+            document.write("Insertados los tres objetos en Objeto WeakMap <br>")
+
+            //Comprobamos si el objeto Obj2 esta creado dentro del objeto WeakMap
+            document.write("El Obj2 existe dentro del objeto WeakMap? " +  ObjWeakMap.has(Obj2)+"<br>");
+
+            document.write("Mostramos el valor almacendado en el Obj1 dentro del objeto WeakMap <b>" +  ObjWeakMap.get(Obj1)+"</b>");
+
+            //Borramos ahora el objeto Obj3 del objeto WeakMap
+            ObjWeakMap.delete(Obj3);
+            document.write("<br>El Obj3 dentro del WeakMap has sido borrado<br>");
+            //Preguntamos si ahora este Obj3 existe dentro del objeto WeakMap
+            document.write("El Obj3 existe dentro del objeto WeakMap? " +  ObjWeakMap.has(Obj3)+"<br>");
+
+    </script>
+  
+    </body>
+</html>

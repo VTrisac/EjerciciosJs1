@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function printPage2()
+            {
+                window.print();
+            }
+            </script>
+        <style>
+            body {background-color:#00F06F;}
+            h2,h3, div {text-align:center;}
+            .justificar {text-align:justify;}
+        </style>
+        </head>
+        <body>
+            <h2>Imprimir desde una imagen, un botón o un link con JavaScript</h2>
+            <h3>Aceptado por los navegadores más importantes como Explorer,
+            Mozilla, o Chrome </h3>
+            <p><img src="imagenes/navegadores.jpg"></p>
+            <p class="justificar">Los navegadores como<b><i>Internet Explorer</i></b> y
+            <b><i>Mozilla</i></b>al ejecutar está función <b>print()</b> activarán
+            directamente el cuadro de diálogo de impresión, mientras que navegadores
+            como<b><i>Google Chrome</i></b> activarán la opción de vista preliminar y
+            su ventana de impresión.</p>
+            <div>
+                <button onClick="printPage2()">Imprimir</button><br><br>
+                <a href="#" onClick="printPage2()"><b>Imprimir</b></a>
+                <br><br>
+                <a href="#"><img src="imagenes/impre.gif" border="0" width="38" height="34"
+                onClick="printPage2()"></a>
+                <hr>
+            </div>
+    </body>
+</html>

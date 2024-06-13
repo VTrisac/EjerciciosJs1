@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*Estilo CSS para la capa que muestra la página*/
+            div{
+                width:300px;
+                height:200px;
+                background: green;
+            }
+            /*Estilo CSS solamente se aplicará a la capa cuando supere los 1024px 
+            la ventana del navegador, controla el tamaño de la ventana en todo momento
+            no solo al cargar la página*/
+            @media only screen and (min-width: 1024px) {
+                div{
+                width:600px;
+                height:400px;
+                background: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="capa1">
+            <p>Esta Capa inicial mostrará un estilo en formato pequeño. Si el
+            valor del objeto screen supera los 1024px entonces se aplicará el
+            estilo grande.</p>
+        </div>
+    </body>
+</html>

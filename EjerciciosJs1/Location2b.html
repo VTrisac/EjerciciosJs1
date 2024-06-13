@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>        
+        function crear_ventana()
+        {
+        var nf1,url;
+        url=window.prompt("Url de la ventana a abrir: ","");
+        if (url != null)  // Si se ha salido pulsando el botón OK
+         {
+            if (url != "")
+            {
+              nf1=window.open(url,"Ventana");
+              informacion(window.location);
+            }
+            else
+            {
+              window.alert("Se ha de especificar toda la URL!!!")
+            }
+         }
+        }
+
+        function informacion(Loc)
+        {
+            var nf=window.open("","Hola");
+                nf.document.open();
+                nf.document.write("<html>");
+                nf.document.write("<head>");
+                nf.document.write("<title>Localización</title>");
+                nf.document.write("</head>");
+                nf.document.write("<body>");                
+                nf.document.write("<br>Host : " + Loc.host);
+                nf.document.write("<br>Hostname : " + Loc.hostname);
+                nf.document.write("<br>Href : " + Loc.href);
+                nf.document.write("<br>Pathname : " + Loc.pathname);
+                nf.document.write("<br>Port : " + Loc.port);
+                nf.document.write("<br>Protocolo : " + Loc.protocol);
+                nf.document.write("</body>");
+                nf.document.write("</html>");
+                nf.document.close();
+        }        
+        </SCRIPT>
+    </head>
+    <body>
+        <BR>
+        <FORM>
+        <INPUT TYPE="button" NAME="Boto" VALUE="Crear Ventana" onClick="crear_ventana()">
+        </FORM>
+    </body>
+</html>

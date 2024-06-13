@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function crear_ventana(Texto)
+            {
+                let nueva_ventana=window.open(Texto,"Hola","toolbar=1,status=1,height=200,width=400");
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <form id="F1">Nombre del archivo HTML a abrir (especificar todo el URL) :<br>
+            <input type="text" id="Linea" size=20><br>
+            <input type="button" id="Boton" value="Crear Ventana"
+            onClick="crear_ventana(document.getElementById('Linea').value)">
+        </form>
+    </body>
+</html>

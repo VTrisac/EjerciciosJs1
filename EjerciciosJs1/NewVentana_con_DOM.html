@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .cambiocuerpo{
+                background-color: Black;
+                color:Green;  
+            }
+            .cambiolink{
+                color: Yellow;
+            }
+        </style>    
+        <script>        
+            function Abrir()
+            {
+                var cambio=document.getElementById("cuerpo");
+                //cargamos el <body> en la variable cambio
+                cambio.className = "cambiocuerpo";
+                //asignamos a la variable el estilo nuevo definico en el style
+                
+                var cambio2=document.getElementById("enlace");
+                cambio2.className = "cambiolink";
+                //Repetimos el proceso para el link de la etiqueta <a>
+                
+                //Esto no estaría en la solución antigua
+                //hay que decidir si se deja o se dice en el enunciado que no lo hagan
+                window.open("obj2.html");
+                window.open("obj3.html");
+                window.open("obj4.html");
+            }        
+        </script>
+    </head>
+    <body id="cuerpo" onLoad="Abrir()">
+        <h1>Bienvenidos a la página de <a id="enlace" href="mailto:alumnoscepi@apdo.com">Grim</a></h1>
+    </body>
+</html>

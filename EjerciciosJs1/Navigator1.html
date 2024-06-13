@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        function prop(formu) {
+            var x = "¿El Navegador tiene Java activado?: " + navigator.javaEnabled();
+            var capaT = document.getElementById("capa1");
+            capaT.innerHTML=x;
+            document.getElementById("nombre").value = navigator.appName;
+            document.getElementById("version").value = navigator.appVersion;
+            document.getElementById("codigo").value = navigator.appCodeName;
+            document.getElementById("agente").value = navigator.userAgent;
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div id="capa1"></div>
+            <table>
+                <tr>
+                <td>Nombre del Navegador</td><td><input type="text" id="nombre" size=50></td>
+                </tr>
+                <tr>
+                <td>Versión del Navegador</td><td><input type="text" id="version" size=50></td>
+                </tr>
+                <tr>
+                <td>Nombre Código</td><td> <input type="text" id="codigo" size=50></td>
+                </tr>
+                <tr>
+                <td>Agente Usuario</td><td> <input type="text" id="agente" size=50></td>
+                </tr>
+                <tr><td colspan="2">
+                <input type="button" name="bot1" value="Propiedades" onClick="prop()">
+                </td></tr>
+            </table>
+        </form>
+    </body>
+</html>

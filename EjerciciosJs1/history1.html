@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        function Calculo()
+        {
+        //Esta función examina el historial de la ventana del explorador
+        //y determina el número de páginas que se han visitado
+            var histCount = window.history.length;
+            if (histCount > 3)
+            {
+                alert("Has visitado " + histCount + " páginas Web. No abuses!");
+            }
+            else
+            {
+                alert("Has visitado " + histCount + " Páginas Web desde que abriste la ventana.");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="button" ID="boton" onClick="Calculo()" value="Test de Historial">
+    </body>
+</html>

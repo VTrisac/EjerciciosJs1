@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>        
+        //Creamos dos arrays que contendrán las direcciones y las imagenes que queremos
+        //mostrar en las listas para abrirlas en una nueva ventana
+        let TDirecc = ["www.google.es","www.cepibase.es","www.w3schools.com","www.wikipedia.org","www.w3.org"];
+        let TImageb = ["Grecia1.jpg","Grecia2.jpg","Grecia3.jpg","Grecia4.jpg","Grecia5.jpg"];
+        
+        function crear_ventana_web()
+        {
+         //función para abrir una ventana nueva con la dirección de internet seleccionada
+         let nueva_ventana=window.open("http://"+document.getElementById("lista").value,"","");
+        }
+                
+        function crear_ventana_imagen()
+        {      
+        let Imagen=document.getElementById("lista").value;
+        
+        let nueva_ventana=window.open("","Visualizador","");
+            nueva_ventana.document.write("<html>");
+            nueva_ventana.document.write("<title>"+Imagen+"</title>")
+            nueva_ventana.document.write("<body>")
+            nueva_ventana.document.write("<img src=imagenes/" + Imagen + ">");
+            nueva_ventana.document.write("<br><input type='button' id='Boton2' value='CERRAR VENTANA' onClick='window.close()'>");
+            nueva_ventana.document.write("</body>");
+            nueva_ventana.document.write("</html>");
+        } 
+        
+        function mostrar1(){           
+            //Esta función rellena el cuadro lista con las direcciones de internet 
+            //y configura el botón para que llame a una función que se encargará 
+            //de abrir la dirección seleccionada  en una nueva ventana
+            let cuadrolista = document.getElementById("lista");  
+            cuadrolista.size=5; //La lista será de 5 elementos
+            cuadrolista.options.length=0 //Iniciamos el grupo de opciones a 0
+            //Ahora rellenamos la lista creada con las direcciones de internet del array
+            //Recorremos el array para ir insertando una por una cada dirección en la lista
+            for (let i=0; i<TDirecc.length; i++)
+            {                
+                let elemento = document.createElement("option");
+                elemento.text = TDirecc[i];
+                cuadrolista.add(elemento);
+            }                     
+            
+           //Ahora modificamos el value del botón y le indicamos la función que ha de llamar
+           //en su evento click
+            let bot = document.getElementById("boton");            
+            bot.value="Abrir Web";                
+           //al pulsar el botón llamaremos a la función encargada de abrir la ventana con la
+           //dirección de internet seleccionada
+             bot.onclick=function(){crear_ventana_web();};     
+        }
+        
+        function mostrar2(){
+            //Modificaremos el cuadro de lista ya creado en la página para que contenga
+            //los nombres de las imagenes y el botón llamará a otra función que abrirá
+            //en este caso la imagen seleccionada en una nueva ventana
+            let cuadrolista = document.getElementById("lista");  
+            cuadrolista.size=5;    
+            cuadrolista.options.length=0;
+            
+            for (let i=0; i<TImageb.length; i++)
+            {                
+                let elemento = document.createElement("option");
+                elemento.text = TImageb[i];
+                cuadrolista.add(elemento);
+            }  
+             
+            let bot = document.getElementById("boton");            
+            bot.value="Abrir Imagen";                
+           //al pulsar el botón llamaremos a la función encargada de abrir la ventana con la
+           //imagen seleccionada
+             bot.onclick=function(){crear_ventana_imagen();}; 
+        }
+        
+        
+        function borrar_lista_y_boton(){
+             let list = document.getElementById("cuerpo");
+             list.removeChild(list.childNodes[3]);
+             list.removeChild(list.childNodes[3]);
+            //De esta manera conseguiriamos eliminar de la página tanto la lista 
+            //como el botón, repetimos el número del nodo a borrar ya que al borrar 
+            //el cuadro de lista el siguiente elemento (boton) toma la númeración 
+            //del eliminado dentro de la lista de nodos.
+        }        
+        </script>
+    </head>
+    <body id="cuerpo">
+          <form id=FPrincipal>
+            <br>
+            <input type="radio" name="R1" value="V1" onclick="mostrar1()">Direcciones de Internet <BR>
+            <input type="radio" name="R1" value="V2" onclick="mostrar2()">Imágenes<br>             
+            <select ID="lista">
+            </select>
+            <input type="button" id="boton" value="Abrir Web">
+          </form>                
+    </body>
+</html>

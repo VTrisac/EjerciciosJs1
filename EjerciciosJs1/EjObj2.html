@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function crear_ventana(Texto)
+        {
+        var destino;
+        var bradio=document.getElementsByName("R1");
+        
+         if (bradio[1].checked == true) 
+         {
+            destino="http://"+Texto
+          }
+         else {
+            destino="file://"+Texto
+          }
+          var nueva_ventana=window.open(destino,"","")
+        } 
+        //-->
+        </SCRIPT>
+    </head>
+    <body bgColor="#FFFFFF">
+        <FORM id=F1>
+          <select id="D1" size="1">
+            <option value="www.cepibase.es">Cepibase</option>
+            <option value="www.renfe.es">Renfe</option>
+            <option value="BDC1\Internet\Html\Index.htm">Página en disco</option>
+            <option value="www.google.es">Google</option>
+          </select>
+          <BR>
+          <input type="radio" checked name="R1" value="V1">Archivo de disco <BR>
+          <input type="radio" name="R1" value="V2">Dirección
+          <BR>
+          <input type="button" id="B1" value="Abrir Nueva" onClick="crear_ventana(document.getElementById('D1').value)">
+        </FORM>
+    </body>
+</html>
